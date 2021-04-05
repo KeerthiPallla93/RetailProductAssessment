@@ -25,7 +25,7 @@ public class ProductController {
     private final ProductManager productManager;
 
     @GetMapping(path = "/{id}", produces = "application/json")
-    public ResponseEntity<FinalProduct> getDemoItems(@PathVariable("id") Integer id) {
+    public ResponseEntity<FinalProduct> getProductDetails(@PathVariable("id") Integer id) {
         Instant start = Instant.now();
         log.info("Requested ProductDetails for id={}", id);
         FinalProduct finalProduct = productManager.getListOfProducts(id);
@@ -36,7 +36,7 @@ public class ProductController {
     }
 
     @PutMapping(consumes = "application/json", produces = "application/json")
-    public void updateDemoItems(@RequestBody FinalProduct request) {
+    public void updateProductDetails(@RequestBody FinalProduct request) {
         log.info("Updated ProductDetails for id={}", request.getId());
         productManager.updateProductDetails(request);
     }

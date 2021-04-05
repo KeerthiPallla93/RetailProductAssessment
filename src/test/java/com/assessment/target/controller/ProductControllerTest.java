@@ -35,7 +35,7 @@ public class ProductControllerTest {
         FinalProduct finalProduct = getFinalProduct(132424, getCurrentPrice());
         when(productManager.getListOfProducts(any())).thenReturn(finalProduct);
 
-        ResponseEntity<FinalProduct> result = productController.getDemoItems(132424);
+        ResponseEntity<FinalProduct> result = productController.getProductDetails(132424);
         assertEquals(200, result.getStatusCode().value());
     }
 
@@ -43,7 +43,7 @@ public class ProductControllerTest {
     @Test
     void updateProductDetails() {
         FinalProduct finalProduct = getFinalProduct(132424, getCurrentPrice());
-        productController.updateDemoItems(finalProduct);
+        productController.updateProductDetails(finalProduct);
         verify(productManager, times(1)).updateProductDetails(any());
         verify(productManager).updateProductDetails(finalProductCaptor.capture());
         FinalProduct finalProductValue = finalProductCaptor.getValue();
