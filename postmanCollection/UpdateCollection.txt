@@ -1,0 +1,11 @@
+curl --location --request PUT 'http://localhost:8081/retail/v1/productDetails' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "id": 13860500,
+  "name": "The Big Lebowski (Blu-ray) (Widescreen)",
+  "current_price": {
+    "value": 13.49,
+    "currency_code": "AUD"
+  }
+}
+'

@@ -1,0 +1,1 @@
+curl --location --request GET 'http://localhost:8081/retail/v1/productDetails/13860428'
