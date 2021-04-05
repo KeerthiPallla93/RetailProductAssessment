@@ -6,7 +6,7 @@ REQ: Need to connect to your DynamoDB with credentials in order to save and get 
 1)GetProductDetails based on id given
 
 Based on the given Id, will interact with REDSKY API and get Product ID and Name.
-if(ProductId details are not Found) throw NotFoundException
+if(ProductId details are not Found) throw NotFoundException else
 Once get successful response, will get PriceInfo details from NOSQL.
 If PriceInfo Not Found in NOSQL, return null for PriceInfo
 
